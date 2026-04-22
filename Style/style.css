@@ -1,0 +1,176 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY (3D gradient background) */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at 20% 20%, #1a1a2e, #0f172a 60%);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* CARD SECTION */
+.card-section {
+    height: 600vh; /* more scroll for smooth stacking */
+    position: relative;
+    padding-top: 150px;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.1)
+    );
+}
+.card {
+    position: sticky;
+    overflow: hidden;
+    top: 120px;
+
+    width: 900px;        
+    height: 620px;      
+
+    margin: 0 auto 80px;
+    border-radius: 24px;
+
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    color: white;
+
+    /* GLASS EFFECT */
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    /* 3D SHADOW */
+    box-shadow: 
+        0 20px 60px rgba(0,0,0,0.6),
+        inset 0 0 40px rgba(255,255,255,0.05);
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 
+        0 30px 80px rgba(0,0,0,0.8),
+        inset 0 0 50px rgba(255,255,255,0.08);
+}
+
+/* TEXT */
+.card h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+/* STACK OFFSET */
+.card:nth-child(1) { 
+    background-image: url('https://picsum.photos/900/600?1');
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    top: 120px;
+ }
+.card:nth-child(2) { 
+    background-image: url('https://picsum.photos/900/600?2');
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+
+    top: 150px; 
+}
+.card:nth-child(3) {
+    background-image: url('https://picsum.photos/900/600?3');
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+
+     top: 180px; 
+    }
+.card:nth-child(4) {
+    background-image: url('https://picsum.photos/900/600?4');
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+     top: 210px; 
+    }
+.card:nth-child(5) {
+    background-image: url('https://picsum.photos/900/600?5');
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    top: 240px; 
+    }
+.card:nth-child(6) {
+    background-image: url('https://picsum.photos/900/600?6');
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    top: 270px; 
+    }
+.card:nth-child(7) {
+    background-image: url('https://picsum.photos/900/600?7');
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    top: 300px; 
+    }
+.card:nth-child(8) {
+    background-image: url('https://picsum.photos/900/600?8');
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    top: 330px; 
+    }
+
+/* SECOND SECTION */
+.content-section {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+/*  FOOTER   */
+footer {
+    height: 120px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
