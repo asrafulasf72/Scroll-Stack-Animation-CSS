@@ -190,9 +190,11 @@ body {
 
 /* -------------CARD SECTION----------------------*/
 .card-section {
-    height: 620vh; /* more scroll for smooth stacking */
+
+    /* height: 620vh;  */ /* more scroll for smooth stacking */
+    height: auto;
     position: relative;
-    padding-top: 150px;
+    padding: 150px 0;
 
     /* New */
 
